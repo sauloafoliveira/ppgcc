@@ -1,13 +1,6 @@
-<style>
-    body {background-color: white; color: black;}
-    * { font-family: Helvetica Neue, sans-serif;}
-    .t { text-align: center; margin: 1rem 0rem;}
-</style>
-
-
-
-<img src="image-20230506095024584.png" alt="image-20230506095024584" />
-
+<div style="text-align: center;">
+<img src="https://github.com/sauloafoliveira/ppgcc/blob/main/classes/deep_learning/2023_1/ppgc_logo.png" alt="PPGCC logo" style="width: 60%" />
+</div>
 
 <h1 class="t">Aprendizagem Profunda – 2023.1</h1>
 
@@ -37,7 +30,7 @@ A cada pessoa foi mostrada as imagens aleatoriamente. Os observadores foram soli
 A escala foi então convertida em $1-100$ linearmente. O teste foi feito em duas sessões com cerca de metade das imagens em cada sessão.
 
 
-O arquivo de informações [jpeginfo.txt]() contém uma lista que descreve como a base de dados foi criada.
+O arquivo de informações [jpeginfo.txt](#) contém uma lista que descreve como a base de dados foi criada.
 Cada linha é uma entrada separada no banco de dados de imagens:
 
 > ```<Imagem de origem> <Imagem de destino> <Taxa de bits atingida>```
