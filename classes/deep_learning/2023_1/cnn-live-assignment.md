@@ -62,7 +62,7 @@ Fonte: <a href="https://stackoverflow.com/questions/874461/read-mat-files-in-pyt
 
 A equipe precisará propor uma rede convolucional com uma das arquiteturas anteriormente descritas e estimar a qualidade tal qual como pessoas, isto é, a rede deverá se comportar como uma pessoa e gerar um conjunto de escores compatíveis.
 
-A avaliação do resulado deverá contar com quatro métricas de desempenho que correlacionam as saída da rede e os valores subjetivos (de pessoas), a saber, 
+A avaliação do resultado deverá contar com quatro métricas de desempenho que correlacionam as saída da rede e os valores subjetivos (de pessoas), a saber, 
 
 - O Erro quadrático médio (RMSE);
 - O coeficiente de correlação linear de Pearson (LLC);
@@ -88,8 +88,8 @@ def outlier_rate(scores):
 A seguir, as regras que delimitam os aspectos desse projeto:
 
 - Utilizem os dados da <kbd>sessão 01</kbd> para treino e os da <kbd>sessão 02</kbd> para teste;
-- Não pode usar rede treinada, ou seja, o treinamento tem que partir de você;
-- Não pode fazer aprendizagem pro transferência;
+- Não pode usar rede treinada, ou seja, o treinamento tem que partir de vocês;
+- Não pode fazer aprendizagem por transferência;
 - Não pode pré-processar a imagem, com exceção de transformações de escala dos pixels ou redimensionamento da entrada;
 - O treinamento tem de ser via Google Colab.
 
