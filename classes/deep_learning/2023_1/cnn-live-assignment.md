@@ -81,8 +81,28 @@ def outlier_rate(scores):
             scores > (mean + 2 * std)
     )    
     
-    return 1 - torch.mean(outilers.double())
+    return torch.mean(outilers.double())
 ```
+ 
+ De modo que o desempenho deve ser avaliado conforme as seguinte métricas:
+ ```python
+ import torch
+ from torchmetrics import SpearmanCorrCoef, PearsonCorrCoef, MeanSquaredError
+ 
+ y_pred = torch.tensor([3, -0.5, 2, 7]) # suponha que veio do modelo
+ y = torch.tensor([2.5, 0.0, 2, 8]) # suponha que veio dos arquivos do dataset
+
+ pearson = PearsonCorrCoef()
+ spearman = SpearmanCorrCoef()
+ mse = MeanSquaredError()
+ 
+ print("Root Mean Square Error (RMSE):", mse(y_pred, y) ** 0.5)
+ print("Pearson (LLC):", pearson(y_pred, y))
+ print("Spearman (SRCC):", spearman(y_pred, y))
+ print("Outlier Rate (OR):", outlier_rate(y_pred))
+
+ ```
+ 
 ## Regras gerais
 
 A seguir, as regras que delimitam os aspectos desse projeto:
