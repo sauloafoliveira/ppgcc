@@ -15,7 +15,7 @@
 
 O dataset Live da Universidade do Texas (UTexas) [link aqui](https://live.ece.utexas.edu/research/Quality/subjective.htm) possui $140$ MB de tamanho. Nele, $29$ imagens coloridas RGB de 24 bits/pixel de alta resolução (normalmente $768 \times 512$) foram comprimidas usando JPEG com diferentes taxas de compressão para produzir um banco de dados de $204$ imagens, $29$ das quais foram as imagens originais (descompactadas). 
 
-> **A senha do zip é <mark>livequalirty2002</mark>.**
+> **A senha do zip é <mark>livequality2002</mark>.**
 
 
 Um dos estudos realizado neste conjunto de dados (release 01) aconteceu em duas sessões. A <kbd>sessão 01</kbd> contém imagens ```img1.bmp``` a ```img116.bmp``` e a <kbd>sessão 02</kbd> contém imagens ```img117.bmp``` a ```img233.bmp```. As taxas de bits escolhidas de forma que a distribuição resultante da qualidade as pontuações para as imagens comprimidas foram aproximadamente uniformes. 
@@ -112,7 +112,30 @@ A seguir, as regras que delimitam os aspectos desse projeto:
 - Não pode fazer aprendizagem por transferência;
 - Não pode pré-processar a imagem, com exceção de transformações de escala dos pixels ou redimensionamento da entrada;
 - O treinamento tem de ser via Google Colab.
+ 
+## Comparação
 
+ Abaixo, condenso em uma tabela a avaliação de alguns algoritmos do tipo *referência completa* (FR):
+ 
+
+ 
+| Tipo   | Algoritmo    | RMSE   | LCC    | SRCC   | OR     |
+| ------ | ------------ | ------ | ------ | ------ | ------ |
+| FR     | [FSIM](http://doi.org/10.1109/TIP.2011.2109730) (2011)         | 7.6780 | 0.9597 | 0.9634 | -      |
+| FR     | VSNR         | 7.390  | 0.889  | 0.889  | -      |
+| FR     | [MAD](https://doi.org/10.1117/1.3267105) (2010)         | -      | 0.9683 | 0.9675 | 41.46% |
+| FR     | [IW-SSIM](https://doi.org/10.1109/TIP.2010.2092435) (2011)     | 8.347  | 0.9522 | 0.9567 | -      |
+| FR     | [GS](https://doi.org/10.1109/TIP.2011.2175935) (2012)          | 9.0376 | 0.9437 | 0.9554 | -      |
+| FR     | HDR-VDR-2    | 8.5    | -      | 0.9544 | -      |
+| FR     | [VSI](10.1109/TIP.2014.2346028) 2014          | 8.6816 | 0.9482 | 0.9524 | -      |
+| FR     | [Fast-MS-SSIM](https://doi.org/10.1007/s11554-010-0170-9) (2010) | 8.0787 | 0.9369 | 0.9409 | -      |
+| FR     | [SFF](https://doi.org/10.1109/TIP.2013.2266579) (2013)          | 7.3460 | 0.9632 | 0.9649 | 0.0655 |
+| FR     | SR-SIM       | 8.0811 | 0.9553 | 0.9618 | -      |
+
+ <small>
+  <strong>Fontes</strong>: <a href="https://live.ece.utexas.edu/research/Quality/evaluation.htm">LIVE Image Quality Assessment Database Algorithm Comparison Results</a>. Acessado em 12 de maio de 2023.
+ </small>
+ 
 ## Prêmio
 
 Os membros da equipe vencedora (a arquitetura com melhor desempenho nas métricas acima) terão a atividade da disciplina que possuir o menor desempenho  **eliminada** da **nota final** da disciplina. Ao passo que ao não entregar um trabalho *consistente*, a nota desta atividade refletirá a qualidade da entrega.
